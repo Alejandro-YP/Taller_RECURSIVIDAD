@@ -1,0 +1,12 @@
+public class Punto12 {
+    static int suma(int[][] mat, int i, int j) {
+        if (i == mat.length) return 0;
+        if (j == mat[0].length) return suma(mat, i + 1, 0);
+        return mat[i][j] + suma(mat, i, j + 1);
+    }
+
+    public static void main(String[] args) {
+        int[][] mat = {{1,2},{3,4}};
+        System.out.println(suma(mat, 0, 0));
+    }
+}

@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Punto8 {
+    static String copiar(String s, int i) {
+        if (i == s.length()) return "";
+        return s.charAt(i) + copiar(s, i + 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String texto = sc.nextLine();
+        System.out.println(copiar(texto, 0));
+    }
+}

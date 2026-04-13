@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Punto2 {
+    static int invertir(int n, int inv) {
+        if (n == 0) return inv;
+        return invertir(n / 10, inv * 10 + n % 10);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(invertir(n, 0));
+    }
+}

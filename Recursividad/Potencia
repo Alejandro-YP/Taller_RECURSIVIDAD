@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Punto6 {
+    static int potencia(int base, int exp) {
+        if (exp == 0) return 1;
+        return base * potencia(base, exp - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int base = sc.nextInt();
+        int exp = sc.nextInt();
+        System.out.println(potencia(base, exp));
+    }
+}

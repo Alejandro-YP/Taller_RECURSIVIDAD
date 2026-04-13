@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Punto9 {
+    static int division(int a, int b) {
+        if (a < b) return 0;
+        return 1 + division(a - b, b);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println(division(a, b));
+    }
+}

@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Punto7 {
+    static int mcd(int m, int n) {
+        if (n == 0) return m;
+        return mcd(n, m % n);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+        System.out.println(mcd(m, n));
+    }
+}
